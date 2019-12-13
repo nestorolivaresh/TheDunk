@@ -1,0 +1,31 @@
+.search-bar:focus{
+  border: 3px solid orange;
+}
+
+.orange-txt, .orange-bg{
+  color: orange;
+}
+
+.instruction-text{
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.info-text{
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.info-text-title{
+  font-weight: normal;
+}
+
+.table-text-title{
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.table-text-data{
+  font-size: 2rem;
+  font-weight: lighter;
+}
