@@ -59,7 +59,7 @@ search.addEventListener("keyup", async e => {
 
 const showLoader = () => {
   loaderCard.style.display = "block";
-  loaderCard.innerHTML = `<img src="images/loader3.gif" />`;
+  loaderCard.innerHTML = `<img src="images/loader.gif" />`;
   playerCard.style.display = "none";
   curSeasonCard.style.display = "none";
   lastSeasonCard.style.display = "none";
