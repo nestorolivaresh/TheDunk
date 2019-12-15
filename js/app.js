@@ -42,7 +42,7 @@ search.addEventListener("keyup", async e => {
 
   if (player) {
     timeout = setTimeout(() => {
-      
+
       showLoader();
       showData(player)
     
@@ -56,13 +56,13 @@ search.addEventListener("keyup", async e => {
   e.preventDefault();
 });
 
-const showLoader = () =>{
+
+const showLoader = () => {
   loaderCard.style.display = "block";
-  loaderCard.innerHTML = `
-  <img
-    src="images/loader.gif"
-  />
-  `;
+  loaderCard.innerHTML = `<img src="images/loader3.gif" />`;
+  playerCard.style.display = "none";
+  curSeasonCard.style.display = "none";
+  lastSeasonCard.style.display = "none";
 }
 
 const showData = async player => {
