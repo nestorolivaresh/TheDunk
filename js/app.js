@@ -2,6 +2,7 @@ const search = document.querySelector(".search-bar");
 const playerCard = document.querySelector(".player-card");
 const curSeasonCard = document.querySelector(".current-season-card");
 const lastSeasonCard = document.querySelector(".last-season-card");
+const loaderCard = document.querySelector(".loader-card");
 const noInfo = "No information";
 
 const getData = async player => {
@@ -40,7 +41,12 @@ search.addEventListener("keyup", async e => {
   clearTimeout(timeout);
 
   if (player) {
-    timeout = setTimeout(() => showData(player), 750);
+    timeout = setTimeout(() => {
+      
+      showLoader();
+      showData(player)
+    
+    }, 1500);
   } else {
     playerCard.style.display = "none";
     curSeasonCard.style.display = "none";
@@ -49,6 +55,15 @@ search.addEventListener("keyup", async e => {
 
   e.preventDefault();
 });
+
+const showLoader = () =>{
+  loaderCard.style.display = "block";
+  loaderCard.innerHTML = `
+  <img
+    src="images/loader.gif"
+  />
+  `;
+}
 
 const showData = async player => {
   if (player) {
@@ -81,6 +96,7 @@ showAll = data => {
 };
 
 const showPlayer = playerInfo => {
+  loaderCard.style.display = "none";
   playerCard.innerHTML = `
     <div class="card-deck">
       <div class="card border-0">
